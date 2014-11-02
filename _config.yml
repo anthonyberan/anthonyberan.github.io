@@ -1,9 +1,9 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Projects, portfolio and other useful things that need to be accessible via the web
+email: spamilicious.me@gmail.com
+description: "Catch all website for my projects, notes, portfolio, demo and any other misc stuff I feel I should put up here""
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://anthony.beran.io""
 twitter_username: jekyllrb
 github_username:  jekyll
 
