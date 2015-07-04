@@ -1,0 +1,12 @@
+body {
+  font-family: $bodyFont;
+  font-size: calc(0.85rem + 1vw);
+}
+
+code {
+  font-family: $codeFont;
+}
+
+* {
+  box-sizing: border-box;
+}

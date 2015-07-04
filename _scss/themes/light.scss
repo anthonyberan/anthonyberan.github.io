@@ -1,0 +1,8 @@
+body[data-theme='light'] {
+  background: #eaeaea;
+  color: #2d2d2d;
+
+  .logo {
+    background-image: url('/assets/img/logo-dark.svg');
+  }
+}

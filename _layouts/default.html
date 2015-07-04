@@ -3,15 +3,22 @@
 
   {% include head.html %}
 
-    <body>
+    <body data-theme="{{ page.theme }}">
 
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrap">
+    <main class="main">
       {{ content }}
-      </div>
-    </div>
+    </main>
+    <aside class="sidebar">
+      <nav class="nav nav--vertical">
+        {% for post in site.posts %}
+          <a class="nav__link dated-link" href="{{ post.url | prepend: site.baseurl }}">
+            <span class="dated-link__date" data-date="{{ post.date | date: "%b %-d, %Y" }}">{{ post.title }}</span>
+          </a>
+        {% endfor %}
+      </nav>
+    </aside>
 
     {% include footer.html %}
 

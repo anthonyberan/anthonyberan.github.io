@@ -1,0 +1,22 @@
+@import '../bower_components/foundation/scss/foundation/functions';
+
+/* foundation settings */
+$row-width: rem-calc(1200);
+$include-xl-html-grid-classes: true;
+$include-xl-html-block-grid-classes: false;
+
+$small-breakpoint:  em-calc(500);
+$medium-breakpoint: em-calc(800);
+$large-breakpoint:  em-calc(1200);
+$xlarge-breakpoint: em-calc(1700);
+
+/* font awesome settings */
+$fa-font-path: './fonts/';
+
+/* color settings */
+$primary-color: #008CBA;
+$secondary-color: #e7e7e7;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;

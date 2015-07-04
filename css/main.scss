@@ -1,0 +1,21 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+// Imports
+@import 'mixins';
+@import '../bower_components/foundation/scss/normalize';
+@import 'settings';
+@import 'foundation';
+@import 'font-awesome';
+@import 'type';
+@import 'layout';
+@import 'syntax';
+@import 'base';
+
+//Import optional themes
+@import 'themes/light';
+@import 'themes/dark';
+
+//import atoms
+@import 'logo/logo.scss';

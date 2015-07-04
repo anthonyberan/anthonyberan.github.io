@@ -1,0 +1,20 @@
+@function stripUnit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem($property, $values...) {
+  $max: length($values);
+  $baseSize: 16;
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: (stripUnit(nth($values, $i))) / $baseSize;
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+
+  #{$property}: $remValues;
+}

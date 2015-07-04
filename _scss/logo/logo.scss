@@ -1,0 +1,6 @@
+.logo {
+  background-size: cover;
+  display: inline-block;
+  @include rem(height, 170);
+  @include rem(width, 281);
+}
