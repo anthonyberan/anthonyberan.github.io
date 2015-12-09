@@ -1,6 +1,7 @@
 .logo {
   background-size: cover;
   display: inline-block;
-  @include rem(height, 170);
-  @include rem(width, 281);
+  height: 0;
+  padding-bottom: 60.49822064%;
+  width: 100%;
 }

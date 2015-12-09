@@ -4,12 +4,12 @@
     <title>ATB Copy + ATB</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+    <g id="logo__svg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g id="ATB-Copy-+-ATB" sketch:type="MSLayerGroup" transform="translate(-44.000000, -54.000000)" font-weight="normal" font-family="Allerta Stencil" font-size="144">
-            <text id="ATB-Copy" opacity="0.100000001" sketch:type="MSTextLayer" transform="translate(165.500000, 125.000000) rotate(-14.000000) translate(-165.500000, -125.000000) " fill="#857A7A">
+            <text id="logo__background" opacity="0.100000001" sketch:type="MSTextLayer" transform="translate(165.500000, 125.000000) rotate(-14.000000) translate(-165.500000, -125.000000) " fill="#474747">
                 <tspan x="18" y="182">ATB</tspan>
             </text>
-            <text id="ATB" sketch:type="MSTextLayer" transform="translate(184.500000, 135.000000) rotate(-14.000000) translate(-184.500000, -135.000000) " fill="#2D2D2D">
+            <text id="logo__foreground" sketch:type="MSTextLayer" transform="translate(184.500000, 135.000000) rotate(-14.000000) translate(-184.500000, -135.000000) " fill="#2D2D2D">
                 <tspan x="37" y="192">ATB</tspan>
             </text>
         </g>

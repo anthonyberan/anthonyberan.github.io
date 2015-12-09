@@ -1,0 +1,10 @@
+// http://www.modularscale.com
+$ms-base: 1rem;
+$ms-range:
+  $minor-second   0,
+  $major-second map-get($mq-breakpoints, medium);
+// ratio variables map available from bower_components/modular-scale/stylesheets/modular-scale/_ratios.scss
+$ms-ratio: $major-second;
+
+$body-font: 'Lato', sans-serif;
+$code-font: 'Source Code Pro', Courier;

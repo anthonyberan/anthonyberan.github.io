@@ -20,8 +20,12 @@
     "tests"
   ],
   "dependencies": {
-    "fontawesome": "~4.3.0",
+    "fontawesome": "~4.4.0",
     "foundation": "~5.5.2",
     "modernizr": "~2.8.3"
+  },
+  "devDependencies": {
+    "mathsass": "~0.9.5",
+    "modular-scale": "~2.1.1"
   }
 }

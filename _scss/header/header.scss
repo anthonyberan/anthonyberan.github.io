@@ -1,0 +1,20 @@
+.header {
+  padding: $gutter 0;
+}
+
+.header__inner {
+  align-items: initial;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.header__logo {
+  flex: 1;
+  max-width: 25%;
+}
+
+.header__nav {
+  flex: 1;
+  padding-left: 50px;
+}

@@ -1,0 +1,22 @@
+$themes: (
+  light:
+    (dark-primary-color: #689f38,
+    primary-color: #8bc34a,
+    light-primary-color: #dcedc8,
+    accent-color: #ffc107,
+    base-txt-color: #fff,
+    primary-txt-color: #212121,
+    secondary-txt-color: #727272,
+    divider-color: #b6b6b6),
+  dark:
+    (dark-primary-color: #689f38,
+    primary-color: #8bc34a,
+    light-primary-color: #dcedc8,
+    accent-color: #607d8b,
+    base-txt-color: #212121,
+    primary-txt-color: #212121,
+    secondary-txt-color: #727272,
+    divider-color: #b6b6b6)
+);
+
+$colors: map-get($themes, $theme);

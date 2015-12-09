@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
+{% include head.html %}
+<body data-theme="{{ page.theme }}">
+{% include header.html %}
 
-  {% include head.html %}
+  <div class="body">
+    <div class="row">
+      <div class="columns small-9">
+        <main class="main">
+          {{ content }}
+        </main>
+      </div>
 
-    <body data-theme="{{ page.theme }}">
+      <div class="columns small-3">
+        <aside class="sidebar">
+          <nav class="sidebar__nav">
+            {% for post in site.posts %}
+              <a class="sidebar__link date-link" href="{{ post.url | prepend: site.baseurl }}" data-date="{{ post.date | date: "%b %-d, %Y" }}">{{ post.title }}</a>
+            {% endfor %}
+          </nav>
+        </aside>
+      </div>
+    </div>
+  </div>
 
-    {% include header.html %}
-
-    <main class="main">
-      {{ content }}
-    </main>
-    <aside class="sidebar">
-      <nav class="nav nav--vertical">
-        {% for post in site.posts %}
-          <a class="nav__link dated-link" href="{{ post.url | prepend: site.baseurl }}">
-            <span class="dated-link__date" data-date="{{ post.date | date: "%b %-d, %Y" }}">{{ post.title }}</span>
-          </a>
-        {% endfor %}
-      </nav>
-    </aside>
-
-    {% include footer.html %}
-
-    </body>
+{% include footer.html %}
+</body>
 </html>

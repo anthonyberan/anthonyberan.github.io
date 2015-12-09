@@ -1,8 +1,20 @@
 ---
 ---
-<h1 class="h1">{{ site.title }}</h1>
-{% highlight js linenos %}
-  var foo = {};
-  foo.bar = 234;
-  foo.baz = 'foobar';
+<div class="row">
+  <div class="columns small-12">
+    <h1 class="h1 copy">{{ site.title }}</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="columns small-12">
+{% highlight js %}
+var me = {
+  firstName: 'Anthony',
+  lastName: 'Beran',
+  job: 'Web Developer',
+  employer: 'Helloworld'
+};
 {% endhighlight %}
+  </div>
+</div>

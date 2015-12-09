@@ -1,6 +1,9 @@
-body[data-theme='dark'] {
-  background: #2d2d2d;
-  color: #eaeaea;
+$theme: dark;
+$colors: map-get($themes, $theme);
+
+body[data-theme='#{$theme}'] {
+  background: #{map-get($colors, dark-primary-color)};
+  color: #{map-get($colors, base-txt-color)};
 
   .logo {
     background-image: url('/assets/img/logo-light.svg');
