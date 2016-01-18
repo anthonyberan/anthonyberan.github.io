@@ -4,15 +4,16 @@
 }
 
 .sidebar__link {
-  @include rem('font-size', 18);
+  @extend %default-type;
   @include rem('margin-bottom', 24);
   @include rem('padding-top', 12);
   color: #{map-get($colors, base-txt-color)};
+  font-variant: small-caps;
   line-height: 1.2;
   position: relative;
 
   &:before {
-    @include rem('font-size', 12);
+    @extend %small-type;
     color: #{map-get($colors, accent-color)};
     content: attr(data-date);
     left: 0;

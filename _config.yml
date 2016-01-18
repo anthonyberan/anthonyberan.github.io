@@ -1,5 +1,5 @@
 # Site settings
-title: Projects, portfolio and other useful things that need to be accessible via the web
+title: All things dev
 email: spamilicious.me@gmail.com
 description: "Catch all website for my projects, notes, portfolio, demo and any other misc stuff I feel I should put up here"
 baseurl: ""
@@ -10,7 +10,7 @@ theme: "light"
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /:year/:month/:day/:title
 
 # Assets
 #

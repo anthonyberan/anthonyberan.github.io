@@ -39,9 +39,18 @@ p {
   @include ms-respond(margin-bottom, -6, $ms-range);
 }
 
+%small-type {
+  @include ms-respond(font-size, -2, $ms-range);
+  @include ms-respond(margin-bottom, -6, $ms-range);
+}
+
+%default-type {
+  @include ms-respond(font-size, 0, $ms-range);
+}
+
 
 body {
-  @include ms-respond(font-size, 0, $ms-range);
+  @extend %default-type;
 }
 
 h1 {

@@ -4,7 +4,6 @@ body {
 
 html,
 body {
-  // font-size: calc(0.85rem + 1vw);
   font-size: calc(1vw * 1.25 + 0.5rem);
 
   @include mq($from: map-get($mq-breakpoints, medium)) {
@@ -14,4 +13,8 @@ body {
 
 code {
   font-family: $code-font;
+}
+
+a {
+  color: #{map-get($colors, accent-color)};
 }

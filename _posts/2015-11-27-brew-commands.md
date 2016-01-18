@@ -7,4 +7,6 @@ tags: brew
 
 To get around xcode license agreement errors:
 
+{% highlight PowerShell %}
 sudo xcodebuild -license
+{% endhighlight %}

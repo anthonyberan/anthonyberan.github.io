@@ -22,8 +22,11 @@ $mq-breakpoints: (
 $fa-font-path: './fonts/';
 
 /* layout settings */
-$gutter: 15px;
-$vertical-gutter: 50px;
+$gutter: rem-calc(15);
+$vertical-gutter: rem-calc(50);
 
 /* themes */
 $theme: light;
+
+/* colors */
+$text-highlight: rgba(0, 0, 0, 0.8);
