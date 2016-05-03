@@ -6,8 +6,10 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-connect": "^4.0.0",
     "gulp-eslint": "^1.1.1",
     "gulp-html5-lint": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
     "gulp-scss-lint": "^0.3.8"
   },
   "scripts": {

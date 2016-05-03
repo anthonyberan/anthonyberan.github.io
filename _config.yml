@@ -27,3 +27,6 @@ defaults:
       noindex: true
       theme: 'light'
       weight: 0
+
+exclude:
+    - node_modules

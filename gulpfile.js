@@ -1,7 +1,15 @@
 var gulp = require('gulp'),
   html5Lint = require('gulp-html5-lint'),
   eslint = require('gulp-eslint'),
-  scsslint = require('gulp-scss-lint');
+  scsslint = require('gulp-scss-lint'),
+  connect = require('gulp-connect');
+
+var paths = {
+  js: ['js/*.js'],
+  images: 'assets/**/*',
+  sass: ['_scss/**/*.scss'],
+  jekyll: ['_layouts/*.html', '_posts/*']
+};
 
 gulp.task('fa', function(){
   gulp.src(['bower_components/fontawesome/fonts/fontawesome-webfont.*'], {})
@@ -27,6 +35,27 @@ gulp.task('scsslint', function() {
       'config': './.scss-lint.yml'
     }))
     .pipe(scsslint.failReporter());
+});
+
+gulp.task('connect', function() {
+  connect.server({
+    root: __dirname,
+    livereload: true
+  });
+});
+
+// Watch for changes
+gulp.task('watch', function() {
+  //gulp.watch(paths.scripts, ['js']);
+  //gulp.watch(paths.sass, ['scss']);
+  gulp.watch(['*.html', '*/*.html', '*/*.md', '!_site/**', '!_site/*/**'], ['jekyll']);
+  // gulp.watch(paths.images, ['images']);
+
+  // When a file in the _site directory changes, tell livereload to reload the page
+  gulp.watch(['_site/*/**']).on('change', function (file) {
+    connect.reload();
+  });
+
 });
 
 // tasks
