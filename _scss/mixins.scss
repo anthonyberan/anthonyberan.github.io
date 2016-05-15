@@ -12,7 +12,7 @@
     $rem-values: #{$rem-values + $value}rem;
 
     @if $i < $max {
-      $rem-values: #{$rem-values + " "};
+      $rem-values: #{$rem-values + ' '};
     }
   }
 

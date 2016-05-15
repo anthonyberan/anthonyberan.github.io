@@ -1,6 +1,6 @@
 @import '../bower_components/foundation/scss/foundation/functions';
 
-/* foundation settings */
+//foundation settings
 $row-width: rem-calc(1200);
 $include-xl-html-grid-classes: true;
 $include-xl-html-block-grid-classes: true;
@@ -12,21 +12,21 @@ $xlarge-breakpoint: em-calc(1700);
 
 //mq settings
 $mq-breakpoints: (
-    small: $small-breakpoint,
-    medium: $medium-breakpoint,
-    large: $large-breakpoint,
-    xlarge: $xlarge-breakpoint
+  small: $small-breakpoint,
+  medium: $medium-breakpoint,
+  large: $large-breakpoint,
+  xlarge: $xlarge-breakpoint
 );
 
-/* font awesome settings */
+//font awesome settings
 $fa-font-path: './fonts/';
 
-/* layout settings */
+//layout settings
 $gutter: rem-calc(15);
 $vertical-gutter: rem-calc(50);
 
-/* themes */
+//themes
 $theme: light;
 
-/* colors */
-$text-highlight: rgba(0, 0, 0, 0.8);
+//colors
+$text-highlight: rgba(0, 0, 0, .8);

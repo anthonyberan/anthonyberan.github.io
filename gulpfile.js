@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
   html5Lint = require('gulp-html5-lint'),
   eslint = require('gulp-eslint'),
-  scsslint = require('gulp-scss-lint'),
+  sasslint = require('gulp-sass-lint'),
   connect = require('gulp-connect');
 
 var paths = {
@@ -28,13 +28,11 @@ gulp.task('eslint', function () {
     .pipe(eslint.failOnError());
 });
 
-
-gulp.task('scsslint', function() {
-  return gulp.src(['./_scss/*.scss', '!./_scss/theme.scss', '!./_scss/syntax.scss', '!./_scss/font-awesome.scss'])
-    .pipe(scsslint({
-      'config': './.scss-lint.yml'
-    }))
-    .pipe(scsslint.failReporter());
+gulp.task('scsslint', function () {
+  gulp.src(['./_scss/*.scss', '!./_scss/syntax.scss', '!./_scss/font-awesome.scss', '!./_scss/foundation.scss'])
+      .pipe(sasslint())
+      .pipe(sasslint.format())
+      .pipe(sasslint.failOnError())
 });
 
 gulp.task('connect', function() {
