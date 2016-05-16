@@ -7,6 +7,6 @@ tags: jekyll
 
 ###To update Jekyll
 
-{% highlight PowerShell %}
+`​`` shell
 sudo gem update jekyll
-{% endhighlight %}
+`​``

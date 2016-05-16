@@ -7,6 +7,6 @@ tags: ruby
 
 ###To view local gems
 
-{% highlight PowerShell %}
+`​`` shell
 $ gem query --local
-{% endhighlight %}
+```
