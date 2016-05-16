@@ -8,13 +8,6 @@ twitter_username: jekyllrb
 github_username:  jekyll
 theme: "light"
 
-# Build settings
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-highlighter: rouge
-permalink: /:year/:month/:day/:title
 
 # Assets
 #
@@ -22,15 +15,3 @@ permalink: /:year/:month/:day/:title
 sass:
   sass_dir:          _scss
   # style:            :compressed
-
-# Default settings
-defaults:
-  -
-    values:
-      layout: "default"
-      noindex: true
-      theme: 'light'
-      weight: 0
-
-exclude:
-    - node_modules
