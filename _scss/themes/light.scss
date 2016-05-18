@@ -1,8 +1,0 @@
-[data-theme='light'] {
-  background: #{map-get($colors, dark-primary-color)};
-  color: #{map-get($colors, base-txt-color)};
-
-  .logo {
-    background-image: url('/assets/img/logo-dark.svg');
-  }
-}

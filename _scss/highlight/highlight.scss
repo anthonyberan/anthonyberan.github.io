@@ -1,7 +1,0 @@
-.highlight {
-  @include rem('font-size', 14);
-  background-color: #{map-get($colors, light-primary-color)};
-  margin: $gutter 0;
-  padding: $gutter;
-  text-shadow: 1px 1px 1px $text-highlight;
-}
