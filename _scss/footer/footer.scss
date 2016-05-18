@@ -1,0 +1,5 @@
+.footer {
+  border-top: 1px solid #{map-get($colors, divider-color)};
+  margin-top: ($gutter * 2);
+  padding: $gutter 0;
+}

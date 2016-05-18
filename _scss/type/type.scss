@@ -1,0 +1,84 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  max-width: 35em;
+}
+
+%h1 {
+  @include ms-respond(font-size, 16, $ms-range);
+  @include ms-respond(margin-bottom, 8, $ms-range);
+}
+
+%h2 {
+  @include ms-respond(font-size, 12, $ms-range);
+  @include ms-respond(margin-bottom, 6, $ms-range);
+}
+
+%h3 {
+  @include ms-respond(font-size, 10, $ms-range);
+  @include ms-respond(margin-bottom, 5, $ms-range);
+}
+
+%h4 {
+  @include ms-respond(font-size, 8, $ms-range);
+  @include ms-respond(margin-bottom, 4, $ms-range);
+}
+
+%h5 {
+  @include ms-respond(font-size, 4, $ms-range);
+  @include ms-respond(margin-bottom, 2, $ms-range);
+}
+
+%h6 {
+  @include ms-respond(font-size, -4, $ms-range);
+  @include ms-respond(margin-bottom, -6, $ms-range);
+}
+
+%small-type {
+  @include ms-respond(font-size, -2, $ms-range);
+  @include ms-respond(margin-bottom, -6, $ms-range);
+}
+
+%default-type {
+  @include ms-respond(font-size, 0, $ms-range);
+}
+
+
+body {
+  @extend %default-type;
+}
+
+h1 {
+  @extend %h1;
+  font-variant: small-caps;
+  line-height: 1.2;
+}
+
+h2 {
+  @extend %h2;
+}
+
+h3 {
+  @extend %h3;
+}
+
+h4 {
+  @extend %h4;
+}
+
+h5 {
+  @extend %h5;
+}
+
+h6 {
+  @extend %h6;
+}
+
+p {
+  @include ms-respond(margin-bottom, 0, $ms-range);
+}

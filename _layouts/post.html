@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="page">
+
+  <header class="page__header">
+    <h1 class="page__headline">{{ page.title }}</h1>
+    <span class="page__timestamp">
+      <time class="timestamp">
+        {{ page.date | date: "%b %-d, %Y" }}
+      </time>
+    </span>
+    {% if page.update %}
+    <span class="page__timestamp page__timestamp--update">
+      <span class="page__timestamp-prefix">Last update:</span>
+      <time class="timestamp--long">
+        {{ page.update | date: "%b %-d, %Y %H:%M:%S" }}
+      </time>
+    </span>
+    {% endif %}
+  </header>
+
+  <article class="page__content">
+  {{ content }}
+  </article>
+
+</div>

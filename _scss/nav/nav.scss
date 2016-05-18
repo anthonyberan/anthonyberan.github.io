@@ -1,0 +1,28 @@
+.nav {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav__item {
+  @include rem('font-size', 30px);
+  box-shadow: 0 2px 0 -1px #{map-get($colors, base-txt-color)};
+  color: #{map-get($colors, base-txt-color)};
+  line-height: 1.1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 0.2s;
+
+  + .nav__item {
+    @include rem('margin-left', 30px);
+  }
+
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    opacity: 0.75;
+  }
+}

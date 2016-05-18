@@ -1,0 +1,35 @@
+{
+  "name": "anthony.beran.io",
+  "version": "1.0.0",
+  "description": "Personal site of Anthony Beran built on Jekyll",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^4.0.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-html5-lint": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass-lint": "^1.1.1",
+    "gulp-scss-lint": "^0.3.9",
+    "sass-lint": "^1.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonyberan/anthonyberan.github.io.git"
+  },
+  "keywords": [
+    "jekyll",
+    "sass",
+    "gulp"
+  ],
+  "author": "Anthony Beran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonyberan/anthonyberan.github.io/issues"
+  },
+  "homepage": "https://github.com/anthonyberan/anthonyberan.github.io#readme"
+}

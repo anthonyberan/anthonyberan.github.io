@@ -1,0 +1,26 @@
+.page__header {
+  padding-bottom: $vertical-gutter;
+}
+
+/* timestamp */
+.page__timestamp {
+  @extend %h5;
+  display: block;
+  font-variant: small-caps;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.page__timestamp--update {
+  @extend %small-type;
+  margin-bottom: 0;
+}
+
+.page__timestamp-prefix {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.timestamp--long {
+  color: #{map-get($colors, accent-color)};
+}

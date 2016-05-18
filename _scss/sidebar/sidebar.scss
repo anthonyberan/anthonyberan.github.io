@@ -1,0 +1,25 @@
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__link {
+  @extend %default-type;
+  @include rem('margin-bottom', 24);
+  @include rem('padding-top', 12);
+  color: #{map-get($colors, base-txt-color)};
+  font-variant: small-caps;
+  line-height: 1.2;
+  position: relative;
+
+  &:before {
+    @extend %small-type;
+    color: #{map-get($colors, accent-color)};
+    content: attr(data-date);
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    text-transform: uppercase;
+  }
+}
