@@ -19,8 +19,8 @@ permalink: /:year/:month/:day/:title
 # Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _scss
+#sass:
+#  sass_dir:          _scss
   # style:            :compressed
 
 # Default settings
@@ -34,3 +34,7 @@ defaults:
 
 exclude:
     - node_modules
+    - tmp
+
+keep_files:
+  - css
