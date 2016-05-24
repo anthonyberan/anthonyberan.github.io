@@ -2,6 +2,10 @@ var gulp = require('gulp'),
     concat    = require('gulp-concat'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
+    html5Lint = require('gulp-html5-lint'),
+    eslint = require('gulp-eslint'),
+    sasslint = require('gulp-sass-lint'),
+    //scsslint = require('gulp-scss-lint'),
     //sass        = require ('gulp-ruby-sass'),
     autoprefixer     = require ('gulp-autoprefixer'),
     uglify   = require('gulp-uglify'),
@@ -25,6 +29,7 @@ var gulp = require('gulp'),
 
 var paths = {
     scripts: ['js/*.js'],
+    js: ['js/*.js', '!*.min.js'],
     images: 'assets/**/*',
     sass: ['_scss/**/*.scss'],
     jekyll: ['_layouts/*.html', '_posts/*', '_sites'],
@@ -117,6 +122,18 @@ gulp.task('style-prod', function() {
 });
 
 gulp.task('sass', function() {
+    gulp.src(['./_scss/*.scss', '!./_scss/syntax.scss', '!./_scss/font-awesome.scss', '!./_scss/foundation.scss'])
+    .pipe(sasslint({
+        'cache-config': true
+    }))
+    .pipe(sasslint.format())
+    .pipe(sasslint.failOnError());
+    //.pipe(scsslint())
+    //.pipe(scsslint.failReporter())
+    //.pipe(scsslint.format())
+    //.pipe(scsslint.failOnError());
+    //scsslint
+
     return gulp.src('_scss/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass.sync({
@@ -128,6 +145,18 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('tmp'));
 });
+
+
+// gulp.task('scsslint', function () {
+//     gulp.src(['./_scss/*.scss', '!./_scss/syntax.scss', '!./_scss/font-awesome.scss', '!./_scss/foundation.scss'])
+//         .pipe(sasslint())
+//         .pipe(sasslint.format())
+//         .pipe(sasslint.failOnError())
+// });
+
+
+
+
 
 gulp.task('css', function() {
     return gulp.src('tmp/main.css')
@@ -145,15 +174,23 @@ gulp.task('css-min', function() {
  */
 gulp.task('scripts', function() {
     // Minify and copy all JavaScript (except vendor scripts)
-    return gulp.src(paths.scripts)
+    return gulp.src(paths.js)
         .pipe(plumber())
-        //.pipe(jshint()) //replace with eshint from old repo
-        .pipe(jshint.reporter("default"))
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failOnError())
         .pipe(uglify())
-        .pipe(concat('all.min.js'))
-        .pipe(gulp.dest('js'))
-        .pipe(connect.reload());
+        .pipe(concat('main.min.js'))
+        .pipe(gulp.dest('_site/js'));
 });
+
+// gulp.task('eslint', function () {
+//     return gulp.src(['./_site/js/*.js'])
+//         .pipe(eslint())
+//         .pipe(eslint.format())
+//         .pipe(eslint.failOnError());
+// });
+
 
 
 /*
@@ -184,17 +221,42 @@ gulp.task('watch', function() {
 
 });
 
+/*
+ * Lint
+ */
+gulp.task('html5-lint', function() {
+    return gulp.src('./_site/*.html')
+        .pipe(html5Lint());
+});
+
+gulp.task('eslint', function () {
+    return gulp.src(paths.js)
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failOnError());
+});
+
+/*
+ * Bower
+ */
+gulp.task('bower', function(){
+    gulp.src(['bower_components/fontawesome/fonts/fontawesome-webfont.*'], {})
+        .pipe(gulp.dest('css/fonts'));
+});
 
 /*
  * Deploy
  */
+//copy _site contents to dist dir and then commit/push
 gulp.task('deploy', function () {
     gulp.src("../dist/**/*")
         .pipe(deploy(gitRemoteUrl, remote));
 });
 
+//move this after jekyll build?
+gulp.task('lint', ['html5-lint']);
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('dev', ['sass', 'css', 'connect', 'jekyll', 'watch']);
+gulp.task('dev', ['bower', 'lint', 'sass', 'css', 'scripts', 'connect', 'jekyll', 'watch']);
 gulp.task('default', ['sass', 'css', 'connect', 'jekyll']);
 gulp.task('prod', ['sass', 'css-min', 'connect', 'jekyll']);
